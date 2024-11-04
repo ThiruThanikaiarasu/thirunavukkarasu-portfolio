@@ -1,17 +1,28 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+
 import MainLayout from '../layouts/MainLayout'
-import HeroComponent from './components/HeroComponent/HeroComponent'
+import HomePage from '../pages/Home/HomePage'
+import ProfilePage from '../pages/Profile/ProfilePage'
+import ProjectsPage from '../pages/Projects/ProjectsPage'
+import ContactPage from '../pages/Contact/ContactPage'
 
 const AppRoutes = () => {
+
+    const location = useLocation()
+
     return (
-        <React.Fragment>
+        <div className="w-full min-h-screen bg-[#f0f0f0] dark:bg-[#1a1a1a]">
             <Routes>
                 <Route element={<MainLayout />}>
-                    <Route path='/' element={<HeroComponent />} />
+                    <Route path='/' element={<HomePage />} />
+                    <Route path='/profile' element={<ProfilePage />} />
+                    <Route path='/projects' element={<ProjectsPage />} />
+                    <Route path='/contact' element={<ContactPage />} />
                 </Route>
             </Routes>
-        </React.Fragment>
+        </div>
     )
 }
 
