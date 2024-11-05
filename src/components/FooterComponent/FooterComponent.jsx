@@ -15,6 +15,9 @@ const FooterComponent = () => {
     const linkedInIcon = isDarkMode ? linkedin_light : linkedin_dark
     const githubIcon = isDarkMode ? github_light : github_dark
 
+    const linkedInUrl = 'https://www.linkedin.com/in/thiruthanikaiarasu/'
+    const githubUrl = 'https://www.github.com/thiruthanikaiarasu'
+
     return (
         <footer
             className="
@@ -50,10 +53,15 @@ const FooterComponent = () => {
             </div>
             
             <div
-                className="flex justify-evenly items-center w-6 h-6 ml-72"
+                className="flex justify-evenly items-center ml-72"
             >
-                <img src={linkedInIcon} alt="" className="mr-2 mt-2"/>
-                <img src={githubIcon} alt="" className="ml-4 mt-2"/>
+                <a href={linkedInUrl} target='_blank' rel="noopener noreferrer">
+                    <img src={linkedInIcon} alt="" className="w-6 h-6 mr-2 mt-2 cursor-pointer"/>
+                </a>
+
+                <a href={githubUrl} target='_blank' rel="noopener noreferrer">
+                    <img src={githubIcon} alt="" className="w-6 h-6 ml-4 mt-2 cursor-pointer"/>
+                </a>
             </div>
 
         </footer>
