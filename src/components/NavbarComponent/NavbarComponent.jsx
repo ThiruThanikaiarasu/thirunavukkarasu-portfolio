@@ -14,7 +14,7 @@ const NavbarComponent = () => {
     }
 
     return (
-        <div className="sticky top-3 border dark:border-[#252525] rounded-md">
+        <div className="sticky top-3 border-[2px] border-[rgb(230, 230, 230)] dark:border-[#2b2b2b] rounded-md">
 
             <div 
                 className="

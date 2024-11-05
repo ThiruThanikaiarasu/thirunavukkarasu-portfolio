@@ -14,6 +14,7 @@ const MainLayout = () => {
                         rounded-lg
                         text-black dark:text-white
                         bg-[#ffffff] dark:bg-[#212121]
+                        border-[1px] border-[rgb(230, 230, 230)] dark:border-[#2b2b2b]
                     "
         >
             <Outlet />
