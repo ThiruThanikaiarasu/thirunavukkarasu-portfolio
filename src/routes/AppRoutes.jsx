@@ -1,6 +1,5 @@
 import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import MainLayout from '../layouts/MainLayout'
 import HomePage from '../pages/Home/HomePage'
