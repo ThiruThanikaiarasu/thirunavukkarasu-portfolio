@@ -1,9 +1,20 @@
 import { ChevronRight } from 'lucide-react'
 import React from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const ProjectCardComponent = ({ project }) => {
 
-    console.log(project)
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const handleOnClick = () => {
+        const url = location.pathname.includes('projects') ? project.url : `projects/${project.url}`
+    
+        navigate(url, { state: { project: project } })
+    }
+
+    console.log(project.href)
+
     return (
         <div 
             className="
@@ -14,6 +25,7 @@ const ProjectCardComponent = ({ project }) => {
                         shadow-custom-shadow
                         hover:ring-4 hover:ring-[#eaeaea] dark:hover:ring-[#252525]
                     "
+            onClick={handleOnClick}
             >
             <div className="p-4 flex items-center space-x-4">
                 <div className="flex-shrink-0">

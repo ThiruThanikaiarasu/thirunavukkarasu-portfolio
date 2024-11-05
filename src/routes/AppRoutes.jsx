@@ -6,6 +6,7 @@ import HomePage from '../pages/Home/HomePage'
 import ProfilePage from '../pages/Profile/ProfilePage'
 import ProjectsPage from '../pages/Projects/ProjectsPage'
 import ContactPage from '../pages/Contact/ContactPage'
+import ProjectDetailsComponent from '../components/ProjectDetailsComponent/ProjectDetailsComponent'
 
 const AppRoutes = () => {
 
@@ -18,7 +19,7 @@ const AppRoutes = () => {
                     <Route path='/' element={<HomePage />} />
                     <Route path='/profile' element={<ProfilePage />} />
                     <Route path='/projects' element={<ProjectsPage />} />
-                    <Route path='/projects/:title' element={<ProjectsPage />} />
+                    <Route path='/projects/:title' element={<ProjectDetailsComponent />} />
                     <Route path='/contact' element={<ContactPage />} />
                 </Route>
             </Routes>
