@@ -29,7 +29,7 @@ const IntroductionComponent = () => {
                                     text-[#666666] dark:text-[#c0c0c0c0]
                                 "   
                     >
-                        Web Developer
+                        Full Stack Developer
                     </p>
 
                     <div
