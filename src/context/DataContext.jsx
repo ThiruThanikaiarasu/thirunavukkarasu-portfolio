@@ -3,15 +3,16 @@ import React, { createContext, useEffect, useState } from 'react'
 const DataContext = createContext()
 
 const DataProvider = ({ children }) => {
-
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const savedDarkMode = JSON.parse(localStorage.getItem('isDarkMode')) || false
+    const [isDarkMode, setIsDarkMode] = useState(savedDarkMode)
 
     useEffect(() => {
         if (isDarkMode) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+        localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode))
     }, [isDarkMode])
 
     const value = {
@@ -19,12 +20,10 @@ const DataProvider = ({ children }) => {
     }
 
     return (
-        <DataContext.Provider
-            value={value}
-        >
+        <DataContext.Provider value={value}>
             {children}
         </DataContext.Provider>
     )
 }
 
-export {DataContext, DataProvider}
+export { DataContext, DataProvider }
