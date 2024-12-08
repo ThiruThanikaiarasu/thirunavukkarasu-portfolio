@@ -19,7 +19,7 @@ const ContactPage = () => {
                             text-[#3c3c3c] dark:text-[#ffffff]
                         "
             >
-                Have a web project in mind?
+                Have an idea in mind?
             </h1>
             <p
                 className="

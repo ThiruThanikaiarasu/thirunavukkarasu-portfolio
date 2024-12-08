@@ -12,9 +12,7 @@ const ProjectCardComponent = ({ project }) => {
     
         navigate(url, { state: { project: project } })
     }
-
-    console.log(project.href)
-
+    
     return (
         <div 
             className="
