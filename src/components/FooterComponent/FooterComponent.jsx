@@ -20,50 +20,93 @@ const FooterComponent = () => {
 
     return (
         <footer
-            className="
-                        py-6 px-6
-                        flex justify-start
-                        bg-[#F6F6F6] dark:bg-[#2C2C2C]
-                        rounded-lg
-                    "
+            className="flex flex-col gap-3"
         >
             <div
-                className="flex items-center px-4 gap-4"
+                className="
+                    py-6 px-6
+                    flex justify-between
+                    bg-[#F6F6F6] dark:bg-[#2C2C2C]
+                    rounded-lg
+                "
             >
-
-                <span
+                <div
                     className="
-                            text-2xl 
-                            pb-1
-                            text-[#CCCCCC] dark:text-[#616161]
+                        flex items-center
+                        gap-2
+                    "
+                >
+                    <span
+                        className="
+                                text-2xl 
+                                pb-1
+                                text-[#CCCCCC] dark:text-[#616161]
+                            "
+                    >
+                        &#8226;
+                    </span>
+
+                    <h2
+                        className="
+                                text-xl font-medium
+                                tracking-tight
+                                text-[#666666] dark:text-[#C0C0C0]
+                            "
+                    >
+                        Ping me
+                    </h2>
+
+
+                </div>
+                <div
+                    className="
+                            mr-4
+                            flex items-center 
+                            gap-6
                         "
                 >
-                    &#8226;
-                </span>
+                    <a 
+                        href={linkedInUrl} 
+                        target='_blank' 
+                        rel="noopener noreferrer"
+                    >
+                        <img 
+                            src={linkedInIcon} 
+                            alt="" 
+                            className="w-6 h-6 cursor-pointer"
+                        />
+                    </a>
 
-                <h2
-                    className="
-                            text-xl font-medium
-                            tracking-tight
-                            text-[#666666] dark:text-[#C0C0C0]
-                        "
-                >
-                    Follow
-                </h2>
+                    <a 
+                        href={githubUrl} 
+                        target='_blank' 
+                        rel="noopener noreferrer"
+                    >
+                        <img 
+                            src={githubIcon} 
+                            alt="" 
+                            className="w-6 h-6 cursor-pointer"
+                        />
+                    </a>
+                </div>
             </div>
-            
+
             <div
-                className="flex justify-evenly items-center ml-72"
+                className="
+                            py-6 px-6
+                            bg-[#F6F6F6] dark:bg-[#2C2C2C]
+                            rounded-lg
+                        "
             >
-                <a href={linkedInUrl} target='_blank' rel="noopener noreferrer">
-                    <img src={linkedInIcon} alt="" className="w-6 h-6 mr-2 mt-2 cursor-pointer"/>
-                </a>
-
-                <a href={githubUrl} target='_blank' rel="noopener noreferrer">
-                    <img src={githubIcon} alt="" className="w-6 h-6 ml-4 mt-2 cursor-pointer"/>
-                </a>
+                <p
+                    className="
+                            text-center
+                            text-[#666666]
+                        "
+                >
+                    Designed by <strong className="font-medium text-[#000000]">Thirunavukkarasu</strong> &copy; 2024
+                </p>
             </div>
-
         </footer>
     )
 }
